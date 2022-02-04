@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Invoer 2</title>
+  </head>
+  <body>
+    <h1>Invoer 2</h1>
+    <p>Invoer met behulp van getElementById()</p>
+    <p>Uitvoer met behulp van document.write()</p>
+
+    <p><input type="text" id="naam" value="Wat is je naam? "></p>
+    <p><input type="text" id="leeftijd" value="Wat is je leeftijd? "></p>
+    <p><button onclick="process()">OK</button></p>
+
+    <script>
+      function process(){
+        // invoer ----------------------------------------------------------------
+        var naam = document.getElementById("naam").value;
+        var leeftijd = document.getElementById("leeftijd").value;
+
+        // berekening ------------------------------------------------------------
+        // er is geen berekening
+
+        // uitvoer ---------------------------------------------------------------
+        document.write("<p> Je naam is " + naam + "</p>");
+        document.write("<p>En je bent " + leeftijd + " Jaar oud </p>");
+      }
+    </script>
+  </body>
+</html>

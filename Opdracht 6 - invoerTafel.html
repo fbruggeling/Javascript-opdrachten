@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Invoer Tafel</title>
+  </head>
+  <body>
+    <h1>Invoer Tafel</h1>
+    <p>invoer met behulp van getElementById()</p>
+    <p>uitvoer met behulp van document.write()</p>
+    <p><input type="text" id="tafel" value="Welke tafel? "></p>
+    <p><button onclick="bereken()">OK</button></p>
+    <script>
+      function bereken() {
+        // invoer ----------------------------------------------------------------
+        var tafel = document.getElementById("tafel").value;
+
+        // berekening en uitvoer -------------------------------------------------
+        document.write("<h1>Dit is de tafel van: "+tafel+ "</h1>");
+        document.write("<p>1 X " + tafel + " = " + 1 * tafel + "</p> ");
+        document.write("<p>2 X " + tafel + " = " + 2 * tafel + "</p> ");
+        document.write("<p>3 X " + tafel + " = " + 3 * tafel + "</p> ");
+        document.write("<p>4 X " + tafel + " = " + 4 * tafel + "</p> ");
+        document.write("<p>5 X " + tafel + " = " + 5 * tafel + "</p> ");
+        document.write("<p>6 X " + tafel + " = " + 6 * tafel + "</p> ");
+        document.write("<p>7 X " + tafel + " = " + 7 * tafel + "</p> ");
+        document.write("<p>8 X " + tafel + " = " + 8 * tafel + "</p> ");
+        document.write("<p>9 X " + tafel + " = " + 9 * tafel + "</p> ");
+        document.write("<p>10 X " + tafel + " = " + 10 * tafel + "</p> ");
+      }
+    </script>
+  </body>
+</html>

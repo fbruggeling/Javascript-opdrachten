@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Oppervlakte Berekening 3</title>
+  </head>
+  <body>
+    <h1>Oppervlakte Berekening 3</h1>
+    <p>Invoer met behulp van getElementById()</p>
+    <p>Uitvoer met behulp van innerHTML()</p>
+
+    <p><input type="text" id="lengte" value="Wat is de lengte? "></p>
+    <p><input type="text" id="breedte" value="Wat is de breedte? "></p>
+    <p><button onclick="process()">OK</button></p>
+
+    <p id="Uitvoerlengte">De lengte is nog niet bekend</p>
+    <p id="Uitvoerbreedte">De breedte is nog niet bekend</p>
+    <p id="Uitvoeroppervlakte">De oppervlakte is nog niet bekend</p>
+
+    <script>
+      function process() {
+        // invoer --------------------------------------------------------------
+        var lengte = document.getElementById("lengte").value;
+        var breedte = document.getElementById("breedte").value;
+
+        // berekening ----------------------------------------------------------
+        var oppervlakte = lengte * breedte
+
+        // uitvoer -------------------------------------------------------------
+        document.getElementById("Uitvoerlengte").innerHTML =
+            "De lengte is " + lengte;
+        document.getElementById("Uitvoerbreedte").innerHTML =
+            "De breedte is " + breedte;
+            document.getElementById("Uitvoeroppervlakte").innerHTML =
+                "De oppervlakte is " + oppervlakte;
+      }
+
+    </script>
+  </body>
+</html>
