@@ -10,6 +10,32 @@
     <p>Uitvoer met behulp van innerHTML()</p>
 
     <p><input type="text" id="prijs" value="Wat is de prijs per stuk? "></p>
-    <p></p>
+    <p><input type="text" id="aantal" value="Wat is het aantal? "></p>
+    <p><button onclick="bereken()">Bereken</button></p>
+
+    <p id="uitvoerprijs">De prijs per stuk is nog niet bekend</p>
+    <p id="uitvoeraantal">Het aantal is nog niet bekend</p>
+    <p id="uitvoertotaal">De totale prijs is nog niet bekend</p>
+
+    <script>
+      function bereken() {
+        // invoer --------------------------------------------------------------
+        var prijs = document.getElementById("prijs").value;
+        var aantal = document.getElementById("aantal").value;
+
+        
+        // berekening ----------------------------------------------------------
+        var totaal = aantal * prijs 
+
+        
+        // uitvoer -------------------------------------------------------------
+        document.getElementById("uitvoerprijs").innerHTML =
+          "De prijs per stuk is " + prijs;
+        document.getElementById("uitvoeraantal").innerHTML =
+          "Het aantal is  " + aantal;
+        document.getElementById("uitvoertotaal").innerHTML =
+          "De totale prijs is  " + totaal;
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>DubbeleSelectie1</title>
+  </head>
+  <body>
+    <h1>DubbeleSelectie1</h1>
+    <p>invoer met behulp van getElementById()</p>
+    <p>uitvoer met behulp van innerHTML()</p>
+
+    <p><input type="text" id="leeftijd" value="Vul hier je leeftijd in!"></p>
+    <p><button onclick="process()">OK</button></p>
+    <p id="uitvoer">Vul het aantal in...</p>
+
+    <script>
+      function process() {
+        // invoer --------------------------------------------------------------
+        var leeftijd = document.getElementById("leeftijd").value;
+
+        // berekenen en processen ----------------------------------------------
+        if(leeftijd < 5) {
+          document.getElementById("uitvoer").innerHTML =
+            "Kinderopvang";
+        } else if(leeftijd < 13) {
+          document.getElementById("uitvoer").innerHTML =
+            "Lagere school"
+        } else if(leeftijd < 17) {
+          document.getElementById("uitvoer").innerHTML =
+            "Middelbare school"
+        } else {
+          document.getElementById("uitvoer").innerHTML =
+            "Vervolg onderwijs"
+        }
+      }
+    </script>
+  </body>
+</html>

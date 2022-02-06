@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Leeftijdscontrole 0</title>
+  </head>
+  <body>
+    <h1>Leeftijdscontrole 0</h1>
+    <p>invoer met behulp van getElementById()</p>
+    <p>uitvoer met behulp van document.write()</p>
+
+    <p><input type="text" id="leeftijd" value="Wat is leeftijd?"></p>
+    <p><button onclick="process()">OK</button></p>
+    <script>
+      function process() {
+        //invoer ---------------------------------------------------------------
+        var leeftijd = document.getElementById("leeftijd").value;
+
+        // berekenen en processen ----------------------------------------------
+        if(leeftijd < 18) {
+          document.write("<img src='images/nix18.jpg'> <br/ >");
+        }
+
+        // uitvoer / einde -----------------------------------------------------
+        document.write("Einde van het programma");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Totaalprijs Inclusief BTW</title>
+  </head>
+  <body>
+    <h1>Totaalprijs Inclusief BTW</h1>
+    <p>Invoer met behulp van getElementById()</p>
+    <p>Uitvoer met behulp van innerHTML()</p>
+
+    <p><input type="text" id="aantal" value="Voer hier het aantal in. "></p>
+    <p><input type="text" id="pps" value="Voer hier de prijs per stuk in. "></p>
+    <p><button onclick="bereken()">Berekenen</button></p>
+
+    <p id="Uitvoeraantal">Het aantal is nog niet bekend</p>
+    <p id="Uitvoerpps">De prijs per stuk is nog niet bekend</p>
+    <p id="Uitvoertotaal">De totaalprijs is nog niet bekend</p>
+    <p id="Uitvoerbtw-bedrag">Het btw-bedrag is nog niet bekend</p>
+    <p id="Uitvoertotaalinc">De totaalprijs inc btw is nog niet bekend</p>
+
+    <script>
+      function bereken() {
+        const btw = 21;
+
+        // invoer --------------------------------------------------------------
+        var aantal = document.getElementById("aantal").value;
+        var pps = document.getElementById("pps").value;
+
+        // uitvoer -------------------------------------------------------------
+        var totaal = aantal * pps;
+        var btwbedrag = totaal * btw /100;
+        var totaalinc = totaal + btwbedrag;
+
+        // uitvoer -------------------------------------------------------------
+        document.getElementById("Uitvoeraantal").innerHTML =
+          "Het aantal is " + aantal;
+        document.getElementById("Uitvoerpps").innerHTML =
+          "De prijs per stuk is " + pps;
+        document.getElementById("Uitvoertotaal").innerHTML =
+          "De totaalprijs is " + totaal
+        document.getElementById("Uitvoerbtw-bedrag").innerHTML =
+          "Het btw-bedrag is " + btwbedrag
+        document.getElementById("Uitvoertotaalinc").innerHTML =
+          "De totaalprijs inc btw is " + totaalinc
+      }
+    </script>
+  </body>
+</html>
